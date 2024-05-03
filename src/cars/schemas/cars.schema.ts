@@ -66,7 +66,7 @@ export class Car extends Base {
     model: string;
 
     @Prop()
-    year: string;
+    year: number;
 
     @Prop()
     color: string;
