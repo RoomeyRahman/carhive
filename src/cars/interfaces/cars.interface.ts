@@ -5,7 +5,7 @@ export interface ICar extends IBase {
     readonly carId?: string;
     readonly owner?: string;
     readonly type?: string;
-    readonly brand?: string[];
+    readonly brand?: string;
     readonly name?: string;
     readonly slug?: string;
     readonly make?: string;
