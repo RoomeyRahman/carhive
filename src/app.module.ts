@@ -12,6 +12,7 @@ import { UsersModule } from './users/users.module';
 import { TypesModule } from './types/types.module';
 import { CarsModule } from './cars/cars.module';
 import { BrandsModule } from './brands/brands.module';
+import { RentsModule } from './rents/rents.module';
 
 const DB_CONNECTION = process.env.DB_CONNECTION;
 
@@ -25,7 +26,8 @@ const DB_CONNECTION = process.env.DB_CONNECTION;
     UsersModule,
     TypesModule,
     BrandsModule,
-    CarsModule
+    CarsModule,
+    RentsModule
   ],
   controllers: [AppController],
   providers: [
