@@ -7,6 +7,8 @@ import { LoggingInterceptor, TransformInterceptor } from './common/interceptor';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import 'dotenv/config';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 const DB_CONNECTION = process.env.DB_CONNECTION;
 
@@ -16,6 +18,8 @@ const DB_CONNECTION = process.env.DB_CONNECTION;
     MongooseModule.forRoot(DB_CONNECTION, {
       autoIndex: true,
     }),
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [
