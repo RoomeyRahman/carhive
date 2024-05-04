@@ -6,6 +6,6 @@ export enum SCHEMA {
     CITY = 'Cities',
     BRAND = 'Brands',
     CAR = 'Cars',
-    BOOKING = 'Bookings',
-    TYPE = 'Types'
+    RENT = 'Rents',
+    TYPE = 'Types',
 }

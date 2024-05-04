@@ -49,7 +49,7 @@ export class CarsService {
         try {
             const newObj: any = {
                 ...data,
-                homeId: generateUniqueCode('1234567890', 8),
+                carId: generateUniqueCode('1234567890', 8),
                 slug: slug(),
                 host: user._id,
                 cBy: user._id,
