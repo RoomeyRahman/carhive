@@ -14,6 +14,12 @@ export type RentDocument = Rent & Document;
 })
 export class Rent extends Base {
     @Prop({
+        unique: true,
+        required: true
+    })
+    rentId: string;
+
+    @Prop({
         type: SchemaTypes.ObjectId,
         ref: SCHEMA.TYPE,
         required: true,
@@ -80,6 +86,7 @@ RentSchema.set('toJSON', {
     transform: function (doc, ret) {
         return {
             _id: ret._id,
+            rentId: ret.rentId,
             carType: ret.carType,
             car: ret.car,
             owner: ret.owner,
@@ -94,7 +101,6 @@ RentSchema.set('toJSON', {
             status: ret.status,
             paymentStatus: ret.paymentStatus,
             notesForOwner: ret.notesForOwner,
-            deliveryMethod: ret.deliveryMethod,
             isActive: ret.isActive,
             isDeleted: ret.isDeleted,
         };

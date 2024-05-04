@@ -1,6 +1,6 @@
-import { IBase, IMedia, IPaginate } from '../../common/interfaces';
+import { IBase, IPaginate } from '../../common/interfaces';
 
-export interface ICar extends IBase {
+export interface IRent extends IBase {
     readonly _id?: string;
     readonly rentId?: string;
     readonly carType?: string;
@@ -16,9 +16,9 @@ export interface ICar extends IBase {
     readonly priceBreakdown?: Record<string, any>;
     readonly status?: string;
     readonly paymentStatus?: string;
-    readonly notesForOwner?: number;
+    readonly notesForOwner?: string;
 }
 
-export interface ICars extends IPaginate {
-    data: ICar[];
+export interface IRents extends IPaginate {
+    data: IRent[];
 }
